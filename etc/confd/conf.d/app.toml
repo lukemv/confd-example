@@ -1,0 +1,6 @@
+[template]
+src = "/appsettings.json.tmpl"
+dest = "/src/appsettings.json"
+keys = [
+    "/app/database.ConnectionString",
+]

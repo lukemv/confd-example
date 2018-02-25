@@ -1,0 +1,19 @@
+version: '3'
+services:
+  consul:
+    image: consul
+    ports: 
+    - 8500:8500
+    - 8600:8600
+    networks:
+    - infra-config
+
+  app:
+    build:
+      context: .
+    networks:
+    - infra-config
+
+networks:
+  infra-config:
+    driver: bridge
